@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.jsftp.jsftp">
+            function <span class="apidocSignatureSpan"></span>jsftp
+            <span class="apidocSignatureSpan">(cfg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.jsftp.super_">
             function <span class="apidocSignatureSpan">jsftp.</span>super_
             <span class="apidocSignatureSpan">()</span>
@@ -76,6 +85,50 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.jsftp" id="apidoc.module.jsftp">module jsftp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsftp.jsftp" id="apidoc.element.jsftp.jsftp">
+        function <span class="apidocSignatureSpan"></span>jsftp
+        <span class="apidocSignatureSpan">(cfg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jsftp = function (cfg) {
+  this.host = cfg.host || &#x27;localhost&#x27;;
+  this.port = cfg.port || FTP_PORT;
+  this.user = cfg.user || &#x27;anonymous&#x27;;
+  this.pass = cfg.pass || &#x27;@anonymous&#x27;;
+  // True if the server doesn&#x27;t support the `stat` command. Since listing a
+  // directory or retrieving file properties is quite a common operation, it is
+  // more efficient to avoid the round-trip to the server.
+  this.useList = cfg.useList || false;
+
+  this.commandQueue = [];
+
+  EventEmitter.call(this);
+
+  var self = this;
+  // Generate generic methods from parameter names. they can easily be
+  // overriden if we need special behavior. they accept any parameters given,
+  // it is the responsibility of the user to validate the parameters.
+  this.raw = function() {
+    return runCmd.apply(self, arguments);
+  };
+
+  COMMANDS.forEach(function(cmd) {
+    self.raw[cmd] = util.deprecate(
+      runCmd.bind(self, cmd),
+      &#x27;Ftp.raw[&#x27; + cmd + &#x27;](args): Use Ftp.raw(\&#x27;&#x27; + cmd + &#x27; args\&#x27;) instead.&#x27;);
+  });
+
+  this.on(&#x27;data&#x27;, dbgResponse);
+
+  this._createSocket(this.port, this.host);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
