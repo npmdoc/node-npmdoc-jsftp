@@ -1,9 +1,14 @@
-# api documentation for  [jsftp (v1.5.5)](https://github.com/sergi/jsftp)  [![npm package](https://img.shields.io/npm/v/npmdoc-jsftp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jsftp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jsftp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jsftp)
+# npmdoc-jsftp
+
+#### api documentation for  [jsftp (v1.5.5)](https://github.com/sergi/jsftp)  [![npm package](https://img.shields.io/npm/v/npmdoc-jsftp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jsftp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jsftp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jsftp)
+
 #### A sane FTP client implementation for NodeJS
 
-[![NPM](https://nodei.co/npm/jsftp.png?downloads=true)](https://www.npmjs.com/package/jsftp)
+[![NPM](https://nodei.co/npm/jsftp.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/jsftp)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-jsftp/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-jsftp_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-jsftp/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-jsftp/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-jsftp/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-jsftp/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-jsftp/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-jsftp/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Sergi Mansilla",
-        "email": "sergi.mansilla@gmail.com",
         "url": "http://sergimansilla.com"
     },
     "bugs": {
@@ -66,13 +70,11 @@
     "main": "lib/jsftp.js",
     "maintainers": [
         {
-            "name": "sergi",
-            "email": "sergi.mansilla@gmail.com"
+            "name": "sergi"
         }
     ],
     "name": "jsftp",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/sergi/jsftp.git"
@@ -83,29 +85,6 @@
     },
     "version": "1.5.5"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module jsftp](#apidoc.module.jsftp)
-1.  [function <span class="apidocSignatureSpan">jsftp.</span>super_ ()](#apidoc.element.jsftp.super_)
-
-
-
-# <a name="apidoc.module.jsftp"></a>[module jsftp](#apidoc.module.jsftp)
-
-#### <a name="apidoc.element.jsftp.super_"></a>[function <span class="apidocSignatureSpan">jsftp.</span>super_ ()](#apidoc.element.jsftp.super_)
-- description and source-code
-```javascript
-function EventEmitter() {
-  EventEmitter.init.call(this);
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
